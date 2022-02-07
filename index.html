@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            min-width: 100%;
+        }
+
+        la-card{
+            --min-width:320px;
+            --view-content: "nike";
+            --view-content-position:absolute;
+            --view-content-left:20px;
+            --view-content-top:0px;
+            --view-content-font:800 8rem auto; 
+            --view-content-color: rgba(0, 0, 0, .1);
+            --view-background:#5a6cb2;
+            --img-bottom:-24%;
+            --img-position:relative;
+            --title-font:2.3rem bold;
+            --type-color:var(--cp);
+            --type-font:1.4rem bold;
+            --price-font:2rem auto;
+            --price-color:var(--cp);
+        }
+        la-card button{
+            background:var(--primary);
+            border:none;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        @media (min-width: 800px){
+            la-card{
+                --view-content-font:800 6rem auto; 
+                --img-position: absolute;
+                --img-bottom:0;
+                --img-width:150%;
+                --img-left:-35%;
+                --img-rotate:-27deg;
+                --description-width:70%;
+                --description-height:50%;
+                --description-margin:0 0 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <la-card
+        src="./imgs/nike-blue.png"
+        name="Nike Zoom 2020"
+        type="RUNNING COLLECTION"
+        price="$1500"
+    >
+        <p slot="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod iure, assumenda ducimus numquam ipsum iusto laborum, culpa omnis eius consequuntur, adipisci voluptatem quasi iste. Expedita dolore voluptas aut accusantium a?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod iure, assumenda ducimus numquam ipsum iusto laborum, culpa omnis eius consequuntur, adipisci voluptatem quasi iste. Expedita dolore voluptas aut accusantium a?</p>
+        <button slot="button"> 
+            Comprar
+        </button>
+    </la-card>
+    <script src="https://irbicn.github.io/la-card/index.js"></script>
+</body>
+</html>
